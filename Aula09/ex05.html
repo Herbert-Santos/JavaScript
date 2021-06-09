@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 10pt Arial;
+        }
+    </style>
+
 </head>
 <body>
+
+    <!-- DOM, Document Object Model -->
     <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o texto</p> <!-- paragrafo [ 0 ]-->
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>  <!-- paragrafo [ 1 ]-->
+    <div id='msg'>Clique aqui</div>
+    <div id='botao'>Botao sair</div>
+    <script>
+
+        // Criando as variaveis para poder manipulalas
+        var corpo = window.document.body
+        var paragrafo1 = window.document.getElementsByTagName('p')[ 0 ]  // Paragrafo selecionado foi o [ 0 ]
+        var dive = window.document.getElementById('msg')
+        var dive2 = window.document.querySelector('div#botao') // Quando for ID usamos (#), Quando for CLASS usamos (.)
+
+        // Manipulando as variaveis que foram criadas anteriormente
+        paragrafo1.style.color = 'black'
+        corpo.style.backgroundColor = 'red'
+        dive.style.color = 'black'
+        dive2.style.backgroundColor = '#fff'
+        dive2.style.color = '#000'
+
+        window.document.write('Esta escrito assim: ' + paragrafo1.innerText)
+    </script>
 </body>
 </html>
