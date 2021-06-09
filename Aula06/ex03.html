@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            background-color: rgb(58, 58, 102); /* Comentario em CSS */
+            color: #000;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seja bem vindo</h1> <!-- E assim que faz comentario em HTML -->
+    <p>Aqui posso colocar qualquer texto</p>
+    <script>
+
+        /*  CONVERTER PARA DINHEIRO REAIS BRASILEIRO
+            var salario = window.prompt('Digite o valor total do seu salário:')
+            salario.document.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+        */
+
+    // Aqui o valor é armazenado como string. 
+
+        var numero1 = window.prompt('Digite o primeiro numero:') 
+        var numero2 = window.prompt('Agora digite o segundo numero:')
+        var soma = numero1 + numero2
+        window.alert('A soma dos valores em string é: ' + soma)
+
+    /*  Para converter os valores para number usaremos
+        Number.parseInt(n) --- numeros inteiros
+        Number.parseFloat(n) --- numeros flutuantes
+        Number(n) --- o javascript vai decidir se o valor é float ou int
+    */
+        var numero3 = Number.parseInt(window.prompt('Digite o primeiro numero:'))
+        var numero4 = Number.parseInt(window.prompt('Agora digite o segundo numero:'))
+        var soma = numero3 + numero4
+        window.alert(`A soma dos valores ${numero3} e ${numero4} convertido para number é: ${soma}`) // Simplificar concatenação é so colocar ${s} dentro das crazes ``
+
+    </script>
+</body>
+</html>
