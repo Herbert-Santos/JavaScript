@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Ficha de cadastro</h1>
+    Escreva seu nome: <input type="text" name="nome" id="nome">
+    Seu E-mail: <input type="email" name="email" id="email">
+    Seu telefone: <input type="tel" name="tell" id="tell">
+    Cidade: <input type="text" name="cidade" id="cidade">
+    <input type="button" value="enviar" onclick="Enviar()">
+
+    <div id="resposta">
+
+    </div>
+    <script>
+        function Enviar(){
+
+            // Este codigo nao esta rodando corretamente
+            // Verifique o codigo se esta certo e rodeo novamente
+            var nome = window.document.getElementById('nome')
+            var email = window.document.getElementById('email')
+            var tell = window.document.getElementById('tell')
+            var cidade = window.document.getElementById('cidade')
+            var res = window.document.getElementById('resposta')
+
+            res.innerHTML = `<p>Seja Bem vindo ${nome}</p>`
+            res.innerHTML += `<p>Enviamos uma mensagem de confirmação para o E-mail, ${email}</p>`
+            res.innerHTML += `<p>Ou digite o codigo que foi enviado para o telefone ${tell}</p>`
+            res.innerHTML += `<p>${cidade} de 2021</p>`
+        }
+    </script>
+</body>
+</html>
