@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>Ficha de cadastro</h1>
-    Escreva seu nome: <input type="text" name="nome" id="nome">
-    Seu E-mail: <input type="email" name="email" id="email">
-    Seu telefone: <input type="tel" name="tell" id="tell">
-    Cidade: <input type="text" name="cidade" id="cidade">
+    <p> seu nome: <input type="text" name="nome1" id="nome1"></p>
+    <p>Seu E-mail: <input type="email" name="email1" id="email1"></p>
+    <p>Seu telefone: <input type="tel" name="tell1" id="tell1"></p>
+    <p>idade: <input type="text" name="cidade1" id="cidade1"></p>
     <input type="button" value="enviar" onclick="Enviar()">
 
     <div id="resposta">
@@ -22,13 +22,13 @@
 
             // Este codigo nao esta rodando corretamente
             // Verifique o codigo se esta certo e rodeo novamente
-            var nome = window.document.getElementById('nome')
-            var email = window.document.getElementById('email')
-            var tell = window.document.getElementById('tell')
-            var cidade = window.document.getElementById('cidade')
+            var nome = window.document.querySelector('input#nome1')
+            var email = window.document.getElementById('email1')
+            var tell = window.document.getElementById('tell1')
+            var cidade = window.document.getElementById('cidade1')
             var res = window.document.getElementById('resposta')
 
-            res.innerHTML = `<p>Seja Bem vindo ${nome}</p>`
+            res.innerHTML += `<p>Seja Bem vindo ${nome}</p>`
             res.innerHTML += `<p>Enviamos uma mensagem de confirmação para o E-mail, ${email}</p>`
             res.innerHTML += `<p>Ou digite o codigo que foi enviado para o telefone ${tell}</p>`
             res.innerHTML += `<p>${cidade} de 2021</p>`
